@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="CustomCellEditors.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:local="clr-namespace:CustomCellEditors">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxg:GridControl Name="grid">
+            <dxg:GridControl.Resources>
+                <ResourceDictionary>
+                    <local:IntToDoubleConverter x:Key="IntToDoubleConverter" />
+                </ResourceDictionary>
+            </dxg:GridControl.Resources>
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="ProductName">Product Name</dxg:GridColumn>
+                <dxg:GridColumn FieldName="Quantity">
+                    <dxg:GridColumn.DisplayTemplate>
+                        <ControlTemplate>
+                            <ProgressBar Value="{Binding Path=DisplayText, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                         Minimum="0" Maximum="200"/>
+                        </ControlTemplate>
+                    </dxg:GridColumn.DisplayTemplate>
+                    <dxg:GridColumn.EditTemplate>
+                        <ControlTemplate>
+                            <Grid VerticalAlignment="Center">
+                                <Slider x:Name="PART_Editor" Minimum="0" Maximum="200"
+                                    Value="{Binding Path=(dxe:BaseEdit.OwnerEdit).EditValue, Mode=TwoWay, Converter={StaticResource IntToDoubleConverter}, RelativeSource={RelativeSource Self}}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </dxg:GridColumn.EditTemplate>
+                </dxg:GridColumn>
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </Grid>
+
+</UserControl>
