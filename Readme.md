@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainPage.xaml](./CS/CustomCellEditors/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/CustomCellEditors/MainPage.xaml.vb))
+* [MainPage.xaml.cs](./CS/CustomCellEditors/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/CustomCellEditors/MainPage.xaml.vb))
+<!-- default file list end -->
 # How to Use Custom Editors to Edit Cell Values
 
 
