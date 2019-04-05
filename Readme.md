@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [MainPage.xaml](./CS/CustomCellEditors/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/CustomCellEditors/MainPage.xaml.vb))
+* [MainPage.xaml](./CS/CustomCellEditors/MainPage.xaml) (VB: [MainPage.xaml](./VB/CustomCellEditors/MainPage.xaml))
 * [MainPage.xaml.cs](./CS/CustomCellEditors/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/CustomCellEditors/MainPage.xaml.vb))
 * [Products.cs](./CS/CustomCellEditors/Products.cs) (VB: [Products.vb](./VB/CustomCellEditors/Products.vb))
 <!-- default file list end -->
